@@ -11,7 +11,7 @@ API = os.getenv("WEATHER_KEY")
 # # print(get_weather)
 # # print(get_weather.json())
 
-def get_data(place, days, kind):
+def get_data(place, days):
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={place}&appid={API}&units=metric"
     response = requests.get(url)
     content = response.json()
@@ -27,19 +27,8 @@ def get_data(place, days, kind):
     days_count = days * 8
     date_temp_pair = date_temp_pair[:days_count]
 
-    dates = []
-    temps = []
-
-    if kind == "Temperature":
-        dates = [date[0] for date in date_temp_pair]
-        temps = [temp[1] for temp in date_temp_pair]
-    if kind == "Sky":
-        dates = [date[0] for date in date_temp_pair]
-        temps = [temp[2] for temp in date_temp_pair]
-
-    return dates, temps
+    return date_temp_pair
 
 
 if __name__ == "__main__":
-    print(get_data(place="London", days=1, kind="Sky"
-                                                ""))
+    print(get_data(place="London", days=1))
