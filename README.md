@@ -1,5 +1,7 @@
 # weather-forecast-data ☔
 
+[English Ver.](README_en.md)
+
 Um data web app que mostra a visualização do clima para os próximos 5 dias de qualquer cidade.
 
 Onde foi utilizado Streamlit para a interface e requests para acessar as informações da API.
