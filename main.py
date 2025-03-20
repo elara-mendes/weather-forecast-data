@@ -41,7 +41,7 @@ if place_input:
             images_paths = [images[condition] for condition in sky_condition]
             # print(sky_condition)
             cols = st.columns(3)
-            for i, (image_path, caption) in enumerate(zip(images_paths, sky_condition)):
+            for i, (image_path, caption) in enumerate(zip(images_paths, ([date[0] for date in all_data]))):
                     image = image_path
                     cols[i % 3].image(image, caption=caption, width=115)
     except KeyError:
