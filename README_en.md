@@ -18,3 +18,9 @@ Finally, run the app using:
 ```bash
 streamlit run main.py
 ```
+
+<img src="screenshots/Screenshot%202025-03-23%20223519.png">
+---
+
+---
+<img src="screenshots/Screenshot%202025-03-23%20223540.png">
